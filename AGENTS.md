@@ -52,6 +52,29 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## 🔄 Git Version Control
+
+**Before modifying any workspace file:**
+
+1. Check git status for uncommitted changes
+2. **Commit current state first** as a safety snapshot
+3. Then proceed with your edit
+4. Commit the new changes
+
+**Why:** If you mess up an edit, you can always `git revert` to the previous snapshot.
+
+**Auto-commit command (run before edits):**
+```bash
+git add -A && git commit -m "Pre-edit snapshot: <what you're about to change>"
+```
+
+**After editing:**
+```bash
+git add -A && git commit -m "Updated: <what changed>" && git push
+```
+
+**Remote:** https://github.com/W1Bb2Yyy3/openclaw11
+
 ## External vs Internal
 
 **Safe to do freely:**
