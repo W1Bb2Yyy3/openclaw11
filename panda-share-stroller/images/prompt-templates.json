@@ -1,0 +1,152 @@
+{
+  "image_generation_templates": {
+    "product_main_view": {
+      "prompt": "熊猫溜娃共享童车产品主视图，90度正面展示，高清细节，专业拍摄，简洁背景，主色调橙色红色，900x500px，产品质感优秀，适合微信公众号封面图，温馨亲民风格",
+      "negative_prompt": "模糊不清，质量低劣，背景杂乱，光线不足，色彩失真，产品变形",
+      "parameters": {
+        "width": 900,
+        "height": 500,
+        "style": "professional product photography",
+        "quality": "ultra high definition"
+      }
+    },
+    
+    "product_detail_views": [
+      {
+        "name": "seat_material",
+        "prompt": "熊猫溜娃共享童车座椅材质特写，微距拍摄，透气网布细节，柔软舒适质感，专业光线，产品细节突出，400x400px",
+        "negative_prompt": "模糊，低质量，光线过强或过暗"
+      },
+      {
+        "name": "wheel_design",
+        "prompt": "熊猫溜娃共享童车轮子设计特写，静音轮细节展示，轮胎纹理，专业产品摄影，400x400px，清晰展示结构",
+        "negative_prompt": "模糊不清，质量差，角度不佳"
+      },
+      {
+        "name": "folding_mechanism",
+        "prompt": "熊猫溜娃共享童车折叠机构展示，功能细节特写，机械结构清晰，专业拍摄，400x400px",
+        "negative_prompt": "无法看清结构，光线不足，角度不当"
+      }
+    ],
+    
+    "usage_scenarios": [
+      {
+        "name": "shopping_mall",
+        "prompt": "商场购物场景中的熊猫溜娃共享童车，明亮整洁的现代商场环境，一位推着童车的年轻妈妈，孩子坐在里面开心挑选商品，温馨亲子氛围，自然光线，产品与环境和谐融合，900x500px",
+        "negative_prompt": "昏暗环境，杂乱背景，人物表情不自然"
+      },
+      {
+        "name": "park_outdoor",
+        "prompt": "公园绿地环境中的熊猫溜娃共享童车，阳光明媚的户外场景，孩子在童车里观看其他孩子玩耍，家长轻松陪伴微笑，绿树成荫，自然温暖光线，900x500px",
+        "negative_prompt": "阴暗环境，人物表情紧张，背景杂乱"
+      },
+      {
+        "name": "hospital_waiting",
+        "prompt": "医院候诊环境中的熊猫溜娃共享童车，整洁的医院走廊，孩子舒适坐在童车里安静等待，家长轻松站立，安静卫生环境，900x500px",
+        "negative_prompt": "杂乱医院环境，孩子哭闹，家长疲惫"
+      },
+      {
+        "name": "office_pickup",
+        "prompt": "办公楼场景中的熊猫溜娃共享童车，现代商务环境，职场人士轻松接孩子，童车与职场环境协调，温馨高效，900x500px",
+        "negative_prompt": "拥挤场景，紧张氛围，环境不协调"
+      }
+    ],
+    
+    "brand_elements": {
+      "logo": {
+        "prompt": "熊猫溜娃品牌LOGO，可爱专业的熊猫形象，橙红色配色，简洁现代设计，200x200px，高辨识度，适合移动端显示",
+        "negative_prompt": "过于复杂，风格混乱，颜色不协调"
+      },
+      "watermark": {
+        "prompt": "熊猫溜娃品牌水印标识，简洁橙色文字LOGO，适合作为图片版权保护，100x50px，透明背景",
+        "negative_prompt": "过于醒目影响主体，不清晰，格式错误"
+      },
+      "share_template": {
+        "prompt": "熊猫溜娃共享童车分享图模板，包含产品展示、品牌LOGO、扫码二维码、优惠信息文字，1200x630px，温馨专业风格，适合微信朋友圈分享",
+        "negative_prompt": "布局混乱，信息不清晰，风格不统一"
+      }
+    },
+    
+    "marketing_materials": [
+      {
+        "name": "before_after",
+        "prompt": "熊猫溜娃共享童车对比图，左边传统童车笨重复杂，右边共享童车轻便简洁，箭头指向变化，900x500px，突出优势对比",
+        "negative_prompt": "对比不明显，布局混乱，效果不直观"
+      },
+      {
+        "name": "family_happy",
+        "prompt": "幸福家庭使用熊猫溜娃共享童车，温馨亲子时光，父母和孩子都开心微笑，轻松愉快的氛围，现代家庭环境，900x500px",
+        "negative_prompt": "表情不自然，氛围不温馨，环境不协调"
+      },
+      {
+        "name": "tech_features",
+        "prompt": "熊猫溜娃共享童车技术优势展示，扫码使用、智能定位、卫生保障等功能图标化展示，现代科技感，900x500px",
+        "negative_prompt": "信息过载，风格混乱，不专业"
+      }
+    ]
+  },
+  
+  "optimization_settings": {
+    "quality_standards": {
+      "resolution": "至少72dpi，900x500px以上",
+      "file_size": "封面图200KB以内，内容图100KB以内",
+      "format": "JPG格式，85%压缩率，PNG需透明背景",
+      "loading_speed": "3秒内完成加载"
+    },
+    
+    "brand_consistency": {
+      "color_scheme": {
+        "primary": "#FF6B35",
+        "secondary": "#FF8C5A", 
+        "background": "#FFF4F0",
+        "text": "#333333"
+      },
+      "typography": {
+        "font": "Microsoft YaHei",
+        "title_size": "24px",
+        "content_size": "16px",
+        "caption_size": "12px"
+      },
+      "style_guide": "温馨、专业、亲民、现代化"
+    },
+    
+    "user_experience": {
+      "mobile_optimized": "响应式设计，适配各种屏幕尺寸",
+      "accessibility": "高对比度，清晰的视觉层次",
+      "loading_optimization": "渐进式加载，预加载策略",
+      "engagement": "视觉吸引力强的设计元素"
+    }
+  },
+  
+  "implementation_plan": {
+    "phase_1": {
+      "duration": "1-2周",
+      "focus": "基础图片制作",
+      "deliverables": [
+        "产品主视图",
+        "3个产品细节图", 
+        "3个核心场景图"
+      ]
+    },
+    "phase_2": {
+      "duration": "2-3周", 
+      "focus": "品牌元素和营销材料",
+      "deliverables": [
+        "品牌LOGO优化",
+        "分享图模板",
+        "对比图展示",
+        "家庭场景图"
+      ]
+    },
+    "phase_3": {
+      "duration": "3-4周",
+      "focus": "质量测试和优化",
+      "deliverables": [
+        "A/B测试素材",
+        "用户反馈收集",
+        "持续优化迭代",
+        "标准化流程"
+      ]
+    }
+  }
+}

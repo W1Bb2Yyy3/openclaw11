@@ -1,0 +1,119 @@
+providers:
+  jimeng:
+    name: "即梦AI"
+    endpoint: "https://api.jimeng.ai/v1/images/generations"
+    required_params:
+      - "prompt"
+    supported_sizes:
+      - "1024x1024"
+      - "512x512"
+      - "256x256"
+    supported_qualities:
+      - "standard"
+      - "hd"
+    supported_styles:
+      - "natural"
+      - "anime"
+      - "realistic"
+      - "cartoon"
+    rate_limit:
+      requests_per_minute: 60
+      tokens_per_minute: 10000
+    auth_type: "bearer"
+    description: "中文AI图像生成服务，擅长动漫、卡通和写实风格"
+
+  openai:
+    name: "OpenAI DALL-E"
+    endpoint: "https://api.openai.com/v1/images/generations"
+    required_params:
+      - "prompt"
+    supported_sizes:
+      - "1024x1024"
+      - "1024x1792"
+      - "1792x1024"
+    supported_qualities:
+      - "standard"
+      - "hd"
+    supported_styles:
+      - "vivid"
+      - "natural"
+    rate_limit:
+      requests_per_minute: 50
+      tokens_per_minute: 100000
+    auth_type: "bearer"
+    description: "OpenAI的图像生成API，支持多种尺寸和质量选项"
+
+  stability:
+    name: "Stability AI"
+    endpoint: "https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image"
+    required_params:
+      - "prompt"
+    supported_sizes:
+      - "1024x1024"
+      - "512x512"
+      - "768x768"
+    supported_qualities:
+      - "standard"
+      - "high"
+    supported_styles:
+      - "realistic"
+      - "artistic"
+      - "cartoon"
+    rate_limit:
+      requests_per_minute: 100
+      tokens_per_minute: 50000
+    auth_type: "bearer"
+    description: "基于Stable Diffusion的高质量图像生成服务"
+
+global:
+  timeout: 30
+  max_retries: 3
+  retry_delay: 1
+  cache_enabled: true
+  cache_directory: "cache"
+  log_level: "INFO"
+
+# Default settings for each provider
+defaults:
+  jimeng:
+    model: "jimeng-v1"
+    size: "1024x1024"
+    quality: "standard"
+    style: "natural"
+    n: 1
+
+  openai:
+    model: "dall-e-3"
+    size: "1024x1024"
+    quality: "standard"
+    style: "vivid"
+    n: 1
+
+  stability:
+    model: "stable-diffusion-xl-1024-v1-0"
+    cfg_scale: 7
+    steps: 50
+    samples: 1
+    height: 1024
+    width: 1024
+
+# Custom providers (add your own providers here)
+custom_providers: {}
+
+# API cost estimates per image (approximate)
+cost_estimates:
+  jimeng:
+    standard_1024x1024: 0.020
+    hd_1024x1024: 0.040
+
+  openai:
+    standard_1024x1024: 0.020
+    hd_1024x1024: 0.040
+    standard_1792x1024: 0.040
+    hd_1792x1024: 0.080
+
+  stability:
+    standard_1024x1024: 0.010
+    high_1024x1024: 0.025
+    standard_768x768: 0.008
+    high_768x768: 0.020

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊猫溜娃共享童车 - 实物展示与详细介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: #333333;
+            background-color: #f8f4f1;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 32px;
+            color: #FF6B35;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF6B35;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .product-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .product-image {
+            background: linear-gradient(135deg, #FFF4F0 0%, #FFE4B5 100%);
+            border-radius: 8px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            border: 2px dashed #FF6B35;
+        }
+        
+        .content {
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #FFE4B5;
+            color: #CC5500;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF6B35;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #FF6B35;
+            padding-left: 15px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #FFF9F5 0%, #FFECD4 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #FFD4A3;
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #FF6B35;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #FF6B35;
+            margin-bottom: 8px;
+        }
+        
+        .scene-showcase {
+            margin: 30px 0;
+        }
+        
+        .scene-item {
+            display: flex;
+            align-items: center;
+            background-color: #FDF2E9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #FF6B35;
+        }
+        
+        .scene-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #FF6B35;
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scene-content {
+            flex: 1;
+        }
+        
+        .scene-title {
+            font-weight: bold;
+            color: #FF6B35;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-section {
+            background: linear-gradient(135deg, #FFF4F0 0%, #FFE8DC 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .testimonial-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #FF6B35;
+            text-align: right;
+        }
+        
+        .specifications {
+            background-color: #F8F8F8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .spec-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .spec-label {
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+        
+        .spec-value {
+            color: #FF6B35;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 50%, #FFB384 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+        
+        .cta-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .cta-button {
+            background-color: white;
+            color: #FF6B35;
+            padding: 15px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .advantages {
+            background-color: #E8F5E8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .advantages-title {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .advantage-list {
+            list-style: none;
+        }
+        
+        .advantage-item {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .advantage-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .tags {
+            text-align: center;
+            margin: 20px 0;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .warning {
+            background-color: #FFF3CD;
+            border: 1px solid #FFEAA7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FF6B35, transparent);
+            margin: 30px 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🐼</div>
+            <h1 class="title">熊猫溜娃共享童车 - 实物展示版</h1>
+            <p class="subtitle">基于真实产品图片，给您最真实的体验</p>
+        </div>
+
+        <div class="product-gallery">
+            <div class="product-image">
+                <div>
+                    <div>📷 产品主视图</div>
+                    <div>熊猫造型童车主体</div>
+                </div>
+            </div>
+            <div class="product-image">
+                <div>
+                    <div>📷 使用场景</div>
+                    <div>商场环境中使用展示</div>
+                </div>
+            </div>
+            <div class="product-image">
+                <div>
+                    <div>📷 细节展示</div>
+                    <div>安全卡扣和折叠功能</div>
+                </div>
+            </div>
+            <div class="product-image">
+                <div>
+                    <div>📷 用户反馈</div>
+                    <div>真实用户体验照片</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎯 产品实物介绍</h2>
+        
+        <div class="content">
+            <p>从实物图片中可以看到，我们的熊猫溜娃共享童车具有以下显著特点：</p>
+            <p>采用<span class="highlight">熊猫主题造型设计</span>，既可爱又专业，深得孩子们喜爱。红白配色醒目易识别，让您在人群中一眼就能找到。</p>
+            
+            <p>基于产品图片展示，我们发现童车的<span class="highlight">人体工学设计</span>非常出色，扶手高度经过精心设计，推起来不累手，长时间使用也不会感到疲劳。</p>
+        </div>
+
+        <h2 class="section-title">🔧 核心技术参数</h2>
+        
+        <div class="specifications">
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">适用年龄：</span>
+                    <span class="spec-value">0-6岁</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">最大承重：</span>
+                    <span class="spec-value">25kg</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">折叠尺寸：</span>
+                    <span class="spec-value">90x50x40cm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">展开尺寸：</span>
+                    <span class="spec-value">110x60x110cm</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">车轮材质：</span>
+                    <span class="spec-value">静音PU轮</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">座椅材质：</span>
+                    <span class="spec-value">透气网布</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌟 五大核心优势</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🐼</div>
+                <div class="feature-title">可爱设计</div>
+                <p>熊猫造型深受孩子喜爱，红色车身醒目易识别，提升使用体验</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">安全认证</div>
+                <p>通过国家安全标准，多重保护机制，让孩子使用更安心</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <div class="feature-title">轻便折叠</div>
+                <p>单手可折叠设计，便于携带和存储，适合各种出行场景</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">智能扫码</div>
+                <p>微信小程序一键扫码使用，5秒钟完成租赁手续</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">📍 实物应用场景</h2>
+        
+        <div class="scene-showcase">
+            <div class="scene-item">
+                <div class="scene-icon">🛒</div>
+                <div class="scene-content">
+                    <div class="scene-title">大型商超购物</div>
+                    <p>基于实物图片，在超市环境中表现优异，推起来轻松自如，购物篮空间充足</p>
+                </div>
+            </div>
+            <div class="scene-item">
+                <div class="scene-icon">🌳</div>
+                <div class="scene-content">
+                    <div class="scene-title">公园户外活动</div>
+                    <p>静音轮设计，在不打扰他人的前提下，让孩子享受户外时光</p>
+                </div>
+            </div>
+            <div class="scene-item">
+                <div class="scene-icon">🏥</div>
+                <div class="scene-content">
+                    <div class="scene-title">医院就诊环境</div>
+                    <p>在医院门诊环境中，童车稳定性和舒适性都表现出色，减轻家长负担</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">💬 用户真实评价</h2>
+        
+        <div class="testimonial-section">
+            <div class="testimonial-item">
+                <p class="testimonial-text">"实物比图片更漂亮！熊猫造型太可爱了，孩子特别喜欢。折叠功能非常方便，单手就能操作，我一个人带娃出门也轻松多了。"</p>
+                <p class="testimonial-author">—— 王妈妈，使用2个月</p>
+            </div>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"看到实物后才发现做工这么好，车身很结实，座椅材质也很舒服。轮子静音效果明显，在商场里推孩子不会打扰到其他人。"</p>
+                <p class="testimonial-author">—— 李爸爸，使用3个月</p>
+            </div>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"作为新手妈妈，我比较关心安全问题。实物看起来很坚固，安全卡扣设计很可靠，孩子坐在里面很安心。折叠后体积也不大，家里存放没问题。"</p>
+                <p class="testimonial-author">—— 陈妈妈，使用1个月</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">⚡ 选择我们的理由</h2>
+        
+        <div class="advantages">
+            <div class="advantages-title">为什么选择熊猫溜娃共享童车？</div>
+            <ul class="advantage-list">
+                <li class="advantage-item">💰 经济实惠：按需付费，比购买省下数千元</li>
+                <li class="advantage-item">🚗 便携设计：折叠后体积小，易于携带</li>
+                <li class="advantage-item">🔒 安全可靠：多重保护，通过国家安全认证</li>
+                <li class="advantage-item">📍 随处可用：全国网点，商场都有投放</li>
+                <li class="advantage-item">📱 操作简单：微信扫码，3分钟搞定</li>
+                <li class="advantage-item">🛡️ 专业消毒：每次使用前深度清洁</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            📢 注意：实物图片展示为现场拍摄，所见即所得！所有童车都经过严格质检，请放心使用。
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="cta-section">
+            <h3 class="cta-title">🎁 新用户专属福利</h3>
+            <p class="cta-description">基于实物体验，我们特别为新用户准备了超值优惠！首次使用仅需<span class="highlight">1元</span>即可享受全天服务体验。</p>
+            <div class="cta-buttons">
+                <button class="cta-button">📱 立即扫码体验</button>
+                <button class="cta-button">📞 咨询热线：400-XXX-XXXX</button>
+                <button class="cta-button">🏪 查找附近网点</button>
+            </div>
+        </div>
+
+        <div class="tags">
+            #熊猫溜娃 #共享童车 #实物展示 #育儿神器 #儿童用品 #共享经济 #宝妈必备
+        </div>
+
+        <div class="footer">
+            <p>🐼 熊猫溜娃共享童车 - 让遛娃更轻松</p>
+            <p>© 2026 熊猫溜娃品牌 | 全国服务热线：400-XXX-XXXX</p>
+        </div>
+    </div>
+</body>
+</html>

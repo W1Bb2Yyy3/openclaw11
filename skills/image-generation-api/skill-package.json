@@ -1,0 +1,26 @@
+{
+  "name": "image-generation-api",
+  "version": "1.0.0",
+  "description": "External API integration for image generation services",
+  "author": "OpenClaw",
+  "skills": {
+    "image-generation-api": {
+      "description": "External API integration for image generation services including 即梦AI (Jimeng AI), OpenAI DALL-E, Stability AI, and other popular image generation APIs. Use this skill when Codex needs to: (1) Generate images through various AI image generation services, (2) Configure and manage API keys for different providers, (3) Handle different image generation parameters and styles, (4) Integrate image generation into larger workflows.",
+      "path": "skills/image-generation-api",
+      "files": {
+        "SKILL.md": "skills/image-generation-api/SKILL.md",
+        "scripts/image_generator.py": "skills/image-generation-api/scripts/image_generator.py",
+        "scripts/provider_configs.py": "skills/image-generation-api/scripts/provider_configs.py",
+        "scripts/utils.py": "skills/image-generation-api/scripts/utils.py",
+        "scripts/demo.py": "skills/image-generation-api/scripts/demo.py",
+        "references/jimeng-api.md": "skills/image-generation-api/references/jimeng-api.md",
+        "references/openai-dalle.md": "skills/image-generation-api/references/openai-dalle.md",
+        "references/stability-ai.md": "skills/image-generation-api/references/stability-ai.md",
+        "references/custom-providers.md": "skills/image-generation-api/references/custom-providers.md",
+        "references/provider_configs.yaml": "skills/image-generation-api/references/provider_configs.yaml",
+        "requirements.txt": "skills/image-generation-api/requirements.txt",
+        "README.md": "skills/image-generation-api/README.md"
+      }
+    }
+  }
+}
